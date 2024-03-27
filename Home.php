@@ -87,14 +87,16 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
               </svg>
+              <!-- <img src="img/life-skills.png"/> -->
             </div>
           </div>
           <div class="p-6">
             <h5 class="mb-4 text-lg font-semibold">Discover the skills</h5>
             <p>
-              Laudantium totam quas cumque pariatur at doloremque hic quos
-              quia eius. Reiciendis optio minus mollitia rerum labore
-              facilis inventore voluptatem ad, quae quia sint.
+            Embarking on this coding bootcamp, I aim to quickly grasp essential programming skills, 
+            diving into both front-end and back-end development.
+             My goal is to emerge ready to tackle real-world tech challenges, 
+             laying a strong foundation for my career in software development.
             </p>
           </div>
         </div>
@@ -113,11 +115,10 @@
             </div>
           </div>
           <div class="p-6">
-            <h5 class="mb-4 text-lg font-semibold">Safe and solid</h5>
+            <h5 class="mb-4 text-lg font-semibold">Check the job offers</h5>
             <p>
-              Eum nostrum fugit numquam, voluptates veniam neque quibusdam
-              ullam aspernatur odio soluta, quisquam dolore animi mollitia a
-              omnis praesentium, expedita nobis!
+            Upon completing the intensive bootcamp, the crucial next step is to diligently check the job offers, 
+            a phase that is as exciting as it is pivotal for kickstarting my career in tech
             </p>
           </div>
         </div>
@@ -136,11 +137,11 @@
             </div>
           </div>
           <div class="p-6">
-            <h5 class="mb-4 text-lg font-semibold">Extremely fast</h5>
+            <h5 class="mb-4 text-lg font-semibold">Take assessments</h5>
             <p>
-              Enim cupiditate, minus nulla dolor cumque iure eveniet facere
-              ullam beatae hic voluptatibus dolores exercitationem? Facilis
-              debitis aspernatur amet nisi?
+            Participating in the learning process involves taking assessments and receiving feedback from the trainers.
+             These assessments serve as crucial checkpoints,
+             allowing learners to gauge their progress and identify areas for improvemen
             </p>
           </div>
         </div>
