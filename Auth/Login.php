@@ -9,6 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="build/tailwind.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>Bootcamp</title>
 </head>
 <body>
@@ -27,13 +28,13 @@
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form class="space-y-6" action="#" method="POST">
+            <form class="space-y-6" action="../includes/loginsys.php" method="POST">
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700">
                         Email address
                     </label>
                     <div class="mt-1">
-                        <input id="email" name="email" type="email" autocomplete="email" required
+                        <input id="email" name="email" type="email" autocomplete="email" 
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Enter your email address">
                     </div>
@@ -44,7 +45,7 @@
                         Password
                     </label>
                     <div class="mt-1">
-                        <input id="password" name="password" type="password" autocomplete="current-password" required
+                        <input id="password" name="password" type="password" autocomplete="current-password" 
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Enter your password">
                     </div>
@@ -67,10 +68,9 @@
                 </div>
 
                 <div>
-                    <button type="submit"
+                    <button type="submit" name="btnsubmit" onclick="succesMessage()"
                         class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-
-                        Sign in
+                      Sign in
                     </button>
                 </div>
             </form>
@@ -100,5 +100,16 @@
         </div>
     </div>
 </div>
+<script>
+    function succesMessage()
+{
+    Swal.fire({
+  title: "Login Successfully!",
+  text: "You clicked the button!",
+  icon: "success",
+  timer: 1500
+});
+}
+</script>
 </body>
 </html>
