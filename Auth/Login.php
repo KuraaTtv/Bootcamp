@@ -104,7 +104,7 @@
     function succesMessage()
 {
     Swal.fire({
-  title: "Login Successfully!",
+  title: "Account Created Successfully!",
   text: "You clicked the button!",
   icon: "success",
   timer: 1500
