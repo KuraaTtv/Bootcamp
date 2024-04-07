@@ -67,7 +67,7 @@
                     <label for="password" class="block text-sm font-medium text-gray-700">
                     Role
                     </label>
-                    <select id="countries" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm text-black">
+                    <select id="countries" name="Role" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm text-black">
                         <option selected>Choose Your Role</option>
                         <option value="US">Candidate</option><!--Candidat-->
                         <option value="CA">Instructor</option><!--Formateur-->

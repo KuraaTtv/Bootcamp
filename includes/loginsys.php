@@ -2,7 +2,7 @@
 require_once('../config.php');
 if(isset($_POST["btnsubmit"]))
 try{
-    $email = $_POST["email"];
+$email = $_POST["email"];
 $password = $_POST["password"];
 {
 $query = $PDO->prepare("SELECT * FROM bootcamp.account WHERE email=:email AND password=:password");
