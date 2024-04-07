@@ -16,12 +16,12 @@
 <div class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900 uppercase">
-            Sign in to your account
+        create your account
         </h2>
         <p class="mt-2 text-center text-sm text-gray-600 max-w">
             Or
-            <a href="Signup.php" class="font-medium text-blue-600 hover:text-blue-500">
-                create an account
+            <a href="Login.php" class="font-medium text-blue-600 hover:text-blue-500">
+                login here
             </a>
         </p>
     </div>
@@ -51,6 +51,31 @@
                     </div>
                 </div>
 
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">
+                    Confirmation Password
+                    </label>
+                    <div class="mt-1">
+                        <input id="password" name="password" type="password" autocomplete="current-password" 
+                            class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Enter your password">
+                    </div>
+                </div>
+                
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">
+                    Role
+                    </label>
+                    <select id="countries" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm text-black">
+                        <option selected>Choose Your Role</option>
+                        <option value="US">Candidate</option><!--Candidat-->
+                        <option value="CA">Instructor</option><!--Formateur-->
+                         <option value="FR">Hire</option><!--Recruter-->
+                        
+                    </select>
+                </div>
+
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <input id="remember_me" name="remember_me" type="checkbox"
@@ -70,7 +95,7 @@
                 <div>
                     <button type="submit" name="btnsubmit" onclick="succesMessage()"
                         class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                      Sign in
+                      Sign up
                     </button>
                 </div>
             </form>
@@ -82,7 +107,7 @@
                     </div>
                     <div class="relative flex justify-center text-sm">
                         <span class="px-2 bg-gray-100 text-gray-500">
-                            Or continue with
+                            Or Sign up with
                         </span>
                     </div>
                 </div>

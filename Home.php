@@ -23,7 +23,7 @@
             <a href="#About" class="text-black ml-4">About</a>
             <a href="#Service" class="text-black ml-4">Services</a>
             <a href="#Contact" class="text-black ml-4">Contact</a>
-            <a href="#" class="ml-4 btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Login</a>
+            <a href="Auth/Login.php" class="ml-4 btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Login</a>
         </div>
         <!-- Mobile menu button -->
         <div class="md:hidden">
