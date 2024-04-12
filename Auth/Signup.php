@@ -1,7 +1,15 @@
+<?php
+$error_message = null;
+ if(!preg_match($Regex,$Hash_Pass))
+ {
+     $error_message = "Password No valide";
+ }
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -25,7 +33,6 @@
             </a>
         </p>
     </div>
-
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form class="space-y-6" action="../includes/Sign-sys.php" method="POST">
@@ -34,9 +41,9 @@
                         Email address
                     </label>
                     <div class="mt-1">
-                        <input id="email" name="email" type="email" autocomplete="email" 
+                        <input id="email" name="email" type="email" autocomplete="email" required
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Enter your email address">
+                            placeholder="Enter your email address">                            
                     </div>
                 </div>
 
@@ -44,17 +51,20 @@
                     <label for="password" class="block text-sm font-medium text-gray-700">
                         Password
                     </label>
-                    <span>
-                        <?php if(isset($error)):?>
-                        <div style="color: red;">
-                            <strong>Error:</strong> <?php echo htmlspecialchars($error); ?>
-                        </div>
-                        <?php endif; ?> 
-                    </span>
                     <div class="mt-1">
-                        <input id="password" name="password" type="password" autocomplete="current-password" 
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Enter your password">
+                            <p class="text-red-600 font-bold">
+                                <?php 
+                                if($error_message !=null)
+                                {
+                                    echo $error_message;
+                                }
+                                ?>
+                            
+                            </p>
+
                     </div>
                 </div>
 
@@ -133,7 +143,7 @@
     </div>
 </div>
 <script>
-    function succesMessage()
+    /*function succesMessage()
 {
     Swal.fire({
   title: "Login Successfully!",
@@ -141,7 +151,7 @@
   icon: "success",
   timer: 1500
 });
-}
+}*/
 </script>
 </body>
 </html>
