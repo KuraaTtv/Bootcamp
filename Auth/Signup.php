@@ -1,12 +1,4 @@
-<?php
-$error_message = null;
- if(!preg_match($Regex,$Hash_Pass))
- {
-     $error_message = "Password No valide";
- }
 
-
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,6 +28,7 @@ $error_message = null;
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form class="space-y-6" action="../includes/Sign-sys.php" method="POST">
+               
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700">
                         Email address
@@ -43,7 +36,7 @@ $error_message = null;
                     <div class="mt-1">
                         <input id="email" name="email" type="email" autocomplete="email" required
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Enter your email address">                            
+                            placeholder="Enter your email address">    
                     </div>
                 </div>
 
@@ -54,17 +47,15 @@ $error_message = null;
                     <div class="mt-1">
                         <input id="password" name="password" type="password" autocomplete="current-password" required
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                            placeholder="Enter your password">
-                            <p class="text-red-600 font-bold">
-                                <?php 
-                                if($error_message !=null)
+                            placeholder="Enter your password" value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>"">
+                            <?php
+                                session_start();
+                                if(!empty($_SESSION["error"]))
                                 {
-                                    echo $error_message;
+                                    echo '<p class="text-red-600 font-bold ml-2">' . $_SESSION['error'] . '</p>';
+                                    unset($_SESSION['error']);
                                 }
-                                ?>
-                            
-                            </p>
-
+                            ?>
                     </div>
                 </div>
 
@@ -73,15 +64,22 @@ $error_message = null;
                     Confirmation Password
                     </label>
                     <div class="mt-1">
-                        <input id="password" name="password" type="password" autocomplete="current-password" 
+                        <input id="password" name="repassword" type="password" autocomplete="current-password" 
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Enter your password">
+                            <?php
+                                if(!empty($_SESSION["conf"]))
+                                {
+                                    echo '<p class="text-red-600 font-bold ml-2">' . $_SESSION['conf'] . '</p>';
+                                    unset($_SESSION['conf']);
+                                }
+                            ?>
                     </div>
                 </div>
                 
 
                 <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700">
+                    <label for="Role" class="block text-sm font-medium text-gray-700">
                     Role
                     </label>
                     <select id="countries" name="Role" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm text-black">
@@ -89,8 +87,14 @@ $error_message = null;
                         <option value="Candidate">Candidate</option><!--Candidat-->
                         <option value="Instructor">Instructor</option><!--Formateur-->
                          <option value="Hire">Hire</option><!--Recruter-->
-                        
                     </select>
+                    <?php
+                                if(!empty($_SESSION["role"]))
+                                {
+                                    echo '<p class="text-red-600 font-bold ml-2">' . $_SESSION['role'] . '</p>';
+                                    unset($_SESSION['role']);
+                                }
+                            ?>
                 </div>
 
                 <div class="flex items-center justify-between">
