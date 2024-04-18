@@ -1,5 +1,9 @@
 <?php
 require_once('../config.php');
+// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
+//     header("Location: restricted_page.php");
+//     exit;
+// }
 if(isset($_POST["btnsubmit"]))
 try{
 $email = $_POST["email"];

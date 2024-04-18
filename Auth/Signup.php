@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -49,7 +51,7 @@
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Enter your password" value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>"">
                             <?php
-                                session_start();
+                                // session_start();
                                 if(!empty($_SESSION["error"]))
                                 {
                                     echo '<p class="text-red-600 font-bold ml-2">' . $_SESSION['error'] . '</p>';

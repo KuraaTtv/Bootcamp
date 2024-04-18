@@ -6,7 +6,6 @@ $error = "";
 $err_conf = "";
 $err_role = "";
 
-
 if($_SERVER['REQUEST_METHOD']=="POST"){
 if(isset($_POST["btnsubmit"]))
 {
@@ -34,13 +33,7 @@ if(isset($_POST["btnsubmit"]))
     }
 
 
-    if(empty($Role))
-    {
-        $err_role = "Your must chose a Role.";
-        $_SESSION["Role"] = $err_role;
-        header("Location: ../Auth/Signup.php");
-         exit;
-    }
+   
         
     else{
         // Crypty password
@@ -51,13 +44,38 @@ if(isset($_POST["btnsubmit"]))
         $query->bindParam(":password",$Hash_Pass);
         $query->bindParam(":Role",$Role);
         $res= $query->execute();
+    if($res !=null){
+        if($Role ==="Candidate")
+        {
+          header("Location: ../Candidate/Dashboard.php");
+          exit;
+        }
+        elseif($Role ==="Instructor")
+        {
+            header("Location: ../Instructor/Dashboard.php");
+        }
+        elseif($Role === "Hire")
+        {
+            header("Location: ../Hire/Dashboard.php");
+        }
+    }
+    else {
+            $err_role = "Your passwords did not match.";
+        $_SESSION["role"] = $err_role;
+        header("Location: ../Auth/Signup.php");
+        }
+        
+   
 
-        header("Location: ../Home.php");
+        // header("Location: ../Home.php");
     }
     
    catch(PDOException $ex)
    {
-    header("Location: ../Auth/Signup.php");
+    // header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
+    error_log($ex->getMessage());
+    header("Location: ../error.php");
+    exit;
    }
   
 }
