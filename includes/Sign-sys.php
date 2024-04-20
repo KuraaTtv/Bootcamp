@@ -2,9 +2,15 @@
 
 require_once('../config.php');
 session_start();
+ // include '../pages/koneksi.php';
+     if(isset($_SESSION['username']))
+        {
+        header("location: ../Home.php");
+        }
 $error = "";
 $err_conf = "";
 $err_role = "";
+
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
 if(isset($_POST["btnsubmit"]))
@@ -44,6 +50,8 @@ if(isset($_POST["btnsubmit"]))
         $query->bindParam(":password",$Hash_Pass);
         $query->bindParam(":Role",$Role);
         $res= $query->execute();
+
+        $_SESSION["username"] = $email;
     if($res !=null){
         if($Role ==="Candidate")
         {

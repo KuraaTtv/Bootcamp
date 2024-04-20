@@ -1,9 +1,7 @@
 <?php
 require_once('../config.php');
-// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
-//     header("Location: restricted_page.php");
-//     exit;
-// }
+
+// $http = (isset($_SERVER["PHP_AUTH_USER"]) && $_SERVER["PHP_AUTH_USER"] == $_POST["email"] && $_SERVER["PHP_AUTH_USER"] == $_POST["password"]);
 if(isset($_POST["btnsubmit"]))
 try{
 $email = $_POST["email"];
