@@ -36,11 +36,7 @@ if(isset($_POST["btnsubmit"]))
         $_SESSION["conf"] = $err_conf;
         header("Location: ../Auth/Signup.php");
          exit; 
-    }
-
-
-   
-        
+    }       
     else{
         // Crypty password
         $Hash_Pass = password_hash($password,PASSWORD_DEFAULT);
@@ -81,9 +77,10 @@ if(isset($_POST["btnsubmit"]))
    catch(PDOException $ex)
    {
     // header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
-    error_log($ex->getMessage());
-    header("Location: ../error.php");
-    exit;
+    // error_log($ex->getMessage());
+    // header("Location: ../error.php");
+    // exit;
+    echo "Error Message ".$ex->getMessage();
    }
   
 }

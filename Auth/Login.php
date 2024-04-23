@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -38,7 +37,7 @@ session_start();
                         Email address
                     </label>
                     <div class="mt-1">
-                        <input id="email" name="email" type="email" autocomplete="email" 
+                        <input id="email" name="email" type="email" autocomplete="email" required
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Enter your email address">
                     </div>
@@ -49,7 +48,7 @@ session_start();
                         Password
                     </label>
                     <div class="mt-1">
-                        <input id="password" name="password" type="password" autocomplete="current-password" 
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
                             class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Enter your password">
                     </div>
@@ -104,16 +103,20 @@ session_start();
         </div>
     </div>
 </div>
-<script>
+<!-- <script>
     function succesMessage()
 {
+let email =document.getElementById("email");
+let pass =document.getElementById("password");
+if(email !=="" && pass !==""){
     Swal.fire({
-  title: "Account Created Successfully!",
-  text: "You clicked the button!",
+  title: "Login Successfully!",
+  text: "Wlecom Back",
   icon: "success",
   timer: 1500
 });
 }
-</script>
+}
+</script> -->
 </body>
 </html>
